@@ -1,0 +1,40 @@
+/* this is unnecessary, he just likes the poppin font style so applied it to everything*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+/* everthing is centred */
+body{
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  min-height: 100vh;
+}
+
+          /* Create the heart rain animation.
+So instead of the heart printing out in a line, rains down */
+.heaRT{
+  position: fixed;  
+  /* puts hearts at top of screen */
+    top: -1vh;
+  /* size of heart */
+  font-size: 2rem;
+
+  /* translate on the y-axis. 
+  y axis is top to bottom so hearts are coming down */
+  transform: translateY(0);
+  
+/* thanks to forwards you wont see hearts pilling at the top in between animation frames */
+  animation: faLL 3s linear forwards;
+}
+
+@keyframes faLL{
+  to{
+    /* rains hearts dowm */
+    transform: translateY(105vh);
+  }
+}
